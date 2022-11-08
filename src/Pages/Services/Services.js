@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../ServiceCard/ServiceCard';
-
 const Services = () => {
     const [services,setServices]=useState([]);
     useEffect(()=>{
@@ -11,7 +10,8 @@ const Services = () => {
         .then(data=>{
             setServices(data)
         })
-    },[])
+});
+
     return (
         <div className="text-center py-10">
   <p className='text-3xl font-bold text-orange-600 m-4'>Services</p>
