@@ -1,6 +1,7 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { Link } from 'react-router-dom';
 const ServiceCard2 = ({service2}) => {
     const {img,price,description,name}=service2;
     return (
@@ -16,7 +17,14 @@ const ServiceCard2 = ({service2}) => {
         <div className="card-body items-center text-center">
           <h2 className="card-title">{name}</h2>
           <p>Price : {price}</p>
-          <p>{description}</p>
+          <p>
+          {
+    description.length > 100 ?
+    <p>{description.slice(0,100)+'...'}<b><Link>Read More</Link></b></p>
+    :
+    <p>{description}</p>
+    }
+          </p>
       
           <div className="card-actions">
             <button className="btn btn-primary">View Details</button>
