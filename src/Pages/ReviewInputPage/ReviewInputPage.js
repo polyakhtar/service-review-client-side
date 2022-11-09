@@ -36,14 +36,16 @@ const ReviewInputPage = () => {
    }
     return (
         <form onSubmit={handlePlaceReview}>
-         <h2 className='text-3xl'>Service Name : {name}</h2>
+         <h2 className='text-3xl my-4'>Service Name : {name}</h2>
     <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 <input name='name' type="text" placeholder="Name" className="input w-full input-bordered" />
 <input name="photoUrl" type="text" placeholder="PhotoUrl" className="input w-full  input-bordered" />
-<input name="email" type="text" placeholder="Email" defaultValue={user?.email} className="input w-full input-bordered" readOnly/>
+<input name="email" type="text" placeholder="Email" defaultValue={user?.email} className="input w-full input-bordered mb-4" readOnly/>
 </div>
 <textarea name="message" className="textarea textarea-bordered h-24 w-full" placeholder="Your Message" required></textarea>
+<div className='text-center my-10'>
 <button className='btn btn-primary'>Add review</button>
+</div>
 </form>
     );
 };

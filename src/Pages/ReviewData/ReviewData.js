@@ -1,29 +1,27 @@
 import React from 'react';
 
 const ReviewData = ({review}) => {
+  console.log(review)
+const {customer,photoUrl,message}=review;
     return (
-        <tr>
-        <td>
-          <div className="flex items-center space-x-3">
-            <div className="avatar">
-              <div className="rounded w-24 h-24">
-             
-              </div>
-            </div>
-            <div>
-              <div className="font-bold"></div>
-              <div className="text-sm opacity-50"></div>
+      <tr>
+      <td>
+        <div className="flex items-center space-x-3">
+          <div className="avatar">
+            <div className="mask mask-squircle w-12 h-12">
+              <img src={photoUrl} alt="Avatar Tailwind CSS Component" />
             </div>
           </div>
-        </td>
-        <td>
+        </div>
+      </td>
+      <td>
         
-          <br/>
-          
-        </td>
-        
-        
-      </tr> 
+        <span className="text-2xl font-bold badge badge-ghost badge-sm">{customer}</span>
+      </td>
+      <td className='text-1xl'>{message}</td>
+      
+    </tr>
+         
     );
 };
 

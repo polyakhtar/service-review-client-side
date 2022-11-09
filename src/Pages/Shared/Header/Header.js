@@ -18,6 +18,7 @@ logOut()
       user?.uid?
       <>
       <li className='font-semibold'><Link to='/addservice'>Add Service</Link></li>
+      <li className='font-semibold'><Link to='/myreviews'>My Reviews</Link></li>
       <li className='font-semibold'><button onClick={handleLogOut}>LogOut</button></li>
       </>
       :

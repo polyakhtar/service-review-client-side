@@ -4,6 +4,7 @@ import AddService from "../../Pages/AddService/AddService";
 import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
+import Myreviews from "../../Pages/Myreviews/Myreviews";
 import PrivateRoute from "../../Pages/PrivateRoute/PrivateRoute";
 import Register from "../../Pages/Register/Register";
 import ReviewInputPage from "../../Pages/ReviewInputPage/ReviewInputPage";
@@ -48,6 +49,10 @@ export const router=createBrowserRouter([
             path:'/reviewinputpage/:id',
             element:<ReviewInputPage></ReviewInputPage>,
             loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+            },
+            {
+            path:'/myreviews',
+            element:<Myreviews></Myreviews>,
             }
 
         ]

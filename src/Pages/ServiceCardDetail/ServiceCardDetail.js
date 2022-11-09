@@ -8,8 +8,6 @@ const ServiceCardDetail = () => {
   const {user}=useContext(AuthContext)
 const serviceCardDetailData=useLoaderData();  
 const [reviews,setReviews]=useState([]);
-console.log(reviews)
-// const{_id,name}=reviews;
 fetch(`http://localhost:5000/reviews/`)
 .then(res=>res.json())
 .then(data=>{
@@ -27,15 +25,15 @@ fetch(`http://localhost:5000/reviews/`)
           <p>{serviceCardDetailData.description}</p>
         </div>
       </div>
-      <div>
-            <h2>You have {reviews.length} Review</h2>
+      <div className="border-2 rounded-md p-6 my-8">
+            <h2 className="text-2xl text-center m-4">You have {reviews.length} Review</h2>
             <div className="overflow-x-auto w-full">
   <table className="table w-full">
     
     <thead>
       <tr>
-        <th>Name</th>
         <th>Image</th>
+        <th>Name</th>
         <th>Message</th>
       </tr>
     </thead>
@@ -43,7 +41,7 @@ fetch(`http://localhost:5000/reviews/`)
      {
 reviews.map(review=><ReviewData
                  key={review._id}
-                 order={review}
+                 review={review}
                  ></ReviewData>)
      } 
       
@@ -55,12 +53,20 @@ reviews.map(review=><ReviewData
     
   </table>
 </div>
+         { user?.email?
+         <div className='text-center mt-20'>
+         <button className='btn btn-primary '>
+        <Link to={`/reviewinputpage/${serviceCardDetailData._id}`} >Go To Add Review</Link></button>
         </div>
-        { user?.email?
-        <Link to={`/reviewinputpage/${serviceCardDetailData._id}`}>Go To Add Review</Link>
          :
+         <div className='text-center mt-20'>
+         <button className='btn btn-primary '>
          <Link to='/login'> Please Log In</Link>
-        }
+         </button>
+         </div>
+        } 
+        </div>
+       
         
       </div>
       
