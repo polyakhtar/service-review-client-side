@@ -9,7 +9,6 @@ const googleProvider=new GoogleAuthProvider();
 const navigate=useNavigate();
 const location=useLocation();
 const from=location.state?.from?.pathname||'/';
-
 const handleLogIn=event=>{
 event.preventDefault();
 const form=event.target;
@@ -20,8 +19,9 @@ logIn(email,password)
 .then(result=>{
     const user=result.user;
     console.log(user);
-    form.reset();
     navigate(from,{replace:true}) 
+    form.reset();
+    
 })
 .catch(error=>console.error(error))
 }
