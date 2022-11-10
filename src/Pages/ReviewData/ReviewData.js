@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReviewData = ({review}) => {
   console.log(review)
-const {customer,photoUrl,message}=review;
+const {customer,photoUrl,message}=review
     return (
       <tr>
       <td>
