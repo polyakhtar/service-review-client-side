@@ -15,16 +15,6 @@ const firebaseConfig = {
   appId:process.env.REACT_APP_APPID , 
   measurementId:process.env.REACT_APP_MEASUREMENTID
 };
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBGfo_E6RnShlETBKk4r0s06d45txI7MnU",
-//   authDomain: "wedding-photographer-ass.firebaseapp.com",
-//   projectId: "wedding-photographer-ass",
-//   storageBucket: "wedding-photographer-ass.appspot.com",
-//   messagingSenderId: "1022181392292",
-//   appId: "1:1022181392292:web:36565400281e2ce7140b31",
-//   measurementId: "G-YQWKNQD98Q"
-// };
-// console.log(firebaseConfig)
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
