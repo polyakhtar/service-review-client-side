@@ -2,14 +2,12 @@ import React from 'react';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import MyreviewsDetail from './MyreviewsDetail';
 
 const Myreviews = () => {
     const {user}=useContext(AuthContext);
-    const reviews=useLoaderData;
-    const [myreviews,setMyReviews]=useState(reviews);
+    const [myreviews,setMyReviews]=useState([]);
    useEffect(()=>{
     fetch(`http://localhost:5000/myreviews?email=${user?.email}`)
     .then(res=>res.json())
@@ -37,24 +35,6 @@ const Myreviews = () => {
         })
     }
         }
-    //  const handleUpdate=id=>{
-    //             fetch(`http://localhost:5000/myreviews/${id}`,{
-    //                 method:"PUT",
-    //                 headers:{
-    //                     'content-type':'application/json'
-    //                 },
-    //                 body:JSON.stringify()
-    //             })
-    //             .then(res=>res.json())
-    //             .then(data=>{
-    //                 console.log(data);
-    //                 setMyReviews(data)
-    //                 if(data.modifiedCount){
-    //                     alert('Updated Successfully')
-    //                 }
-    //             })
-    //             }
-  
     return (
         <div className="overflow-x-auto w-full my-8 ">
   <table className="table w-full">
