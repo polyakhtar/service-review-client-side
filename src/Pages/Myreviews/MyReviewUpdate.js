@@ -18,8 +18,10 @@ const MyReviewUpdate = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
+            // setReview(data)
             if(data.acknowledged){
-                alert('Review Updated Successfully')
+                alert('Review Updated Successfully');
+                
             }
         })
 

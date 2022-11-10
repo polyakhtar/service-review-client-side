@@ -54,6 +54,7 @@ export const router=createBrowserRouter([
             {
             path:'/myreviews',
             element:<PrivateRoute><Myreviews></Myreviews></PrivateRoute>,
+            loader:()=>fetch(`http://localhost:5000/myreviews`)
             },
             {
                 path:'/updatereview/:id',
