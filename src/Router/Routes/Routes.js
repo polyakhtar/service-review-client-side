@@ -44,12 +44,12 @@ export const router=createBrowserRouter([
             {
                 path:'/servicecarddetail/:id',
                 element:<ServiceCardDetail></ServiceCardDetail>,
-                loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+                loader:({params})=>fetch(`https://wedding-photographer-assignment-server.vercel.app/services/${params.id}`)
             },
             {
             path:'/reviewinputpage/:id',
             element:<ReviewInputPage></ReviewInputPage>,
-            loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+            loader:({params})=>fetch(`https://wedding-photographer-assignment-server.vercel.app/services/${params.id}`)
             },
             {
             path:'/myreviews',
@@ -58,7 +58,7 @@ export const router=createBrowserRouter([
             {
                 path:'/updatereview/:id',
                 element:<MyReviewUpdate></MyReviewUpdate>,
-                loader:({params})=>fetch(`http://localhost:5000/myreviews/${params.id}`)
+                loader:({params})=>fetch(`https://wedding-photographer-assignment-server.vercel.app/myreviews/${params.id}`)
             }
 
         ]

@@ -7,7 +7,7 @@ const MyReviewUpdate = () => {
     const [review,setReview]=useState(storedReview);
     const handleUpdateReview=event=>{
         event.preventDefault();
-        fetch(`http://localhost:5000/myreviews/${storedReview._id}`,{
+        fetch(`https://wedding-photographer-assignment-server.vercel.app/myreviews/${storedReview._id}`,{
             method:"PUT",
             headers:{
                 'content-type':'application/json'

@@ -17,7 +17,7 @@ const ReviewInputPage = () => {
             customer:name,email,photoUrl,message
         }
     
-    fetch('http://localhost:5000/reviews',{
+    fetch('https://wedding-photographer-assignment-server.vercel.app/reviews',{
         method:'POST',
         headers:{
             'content-type':'application/json'

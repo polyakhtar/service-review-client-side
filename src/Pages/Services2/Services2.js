@@ -5,7 +5,7 @@ import ServiceCard2 from '../ServiceCard2/ServiceCard2';
 const Services2 = () => {
     const [services2,setServices2]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services2')
+        fetch('https://wedding-photographer-assignment-server.vercel.app/services2')
         .then(res=>res.json())
         .then(data=>{
             setServices2(data);

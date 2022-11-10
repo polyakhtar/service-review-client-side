@@ -4,7 +4,7 @@ const AddService = () => {
     const [services,setServices]=useState({});
     const handleAddUser=event=>{
         event.preventDefault();
-        fetch('http://localhost:5000/services',{
+        fetch('https://wedding-photographer-assignment-server.vercel.app/services',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

@@ -8,7 +8,7 @@ const ServiceCardDetail = () => {
   const {user}=useContext(AuthContext)
 const serviceCardDetailData=useLoaderData();  
 const [reviews,setReviews]=useState([]);
-fetch(`http://localhost:5000/reviews/`)
+fetch(`https://wedding-photographer-assignment-server.vercel.app/reviews/`)
 .then(res=>res.json())
 .then(data=>{
   setReviews(data)

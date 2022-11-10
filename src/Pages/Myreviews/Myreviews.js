@@ -9,7 +9,7 @@ const Myreviews = () => {
     const {user}=useContext(AuthContext);
     const [myreviews,setMyReviews]=useState([]);
    useEffect(()=>{
-    fetch(`http://localhost:5000/myreviews?email=${user?.email}`)
+    fetch(`https://wedding-photographer-assignment-server.vercel.app/myreviews?email=${user?.email}`)
     .then(res=>res.json())
     .then(data=>{
         console.log(data);
@@ -20,7 +20,7 @@ const Myreviews = () => {
    const handleDelete=id=>{
     const procced=window.confirm('Are you sure want to delete');
     if(procced){
-        fetch(`http://localhost:5000/myreviews/${id}`,{
+        fetch(`https://wedding-photographer-assignment-server.vercel.app/myreviews/${id}`,{
     method:"DELETE",
         })
         .then(res=>res.json())
@@ -35,18 +35,17 @@ const Myreviews = () => {
         })
     }
         }
-        
+
     return (
         <div className="overflow-x-auto w-full my-8 ">
   <table className="table w-full">
     <div>
-
-        {
+    {
          myreviews.map(myreview=><MyreviewsDetail
          key={myreview._id}
          myreview={myreview}
          handleDelete={handleDelete}
-         ></MyreviewsDetail>)  
+         ></MyreviewsDetail>) 
         }
     </div>
   </table>
