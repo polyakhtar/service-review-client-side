@@ -13,11 +13,11 @@ const createUser=(email,password)=>{
 return createUserWithEmailAndPassword(auth,email,password)
 }
 const logIn=(email,password)=>{
-    setLoading(true)
+    setLoading(true);
     return signInWithEmailAndPassword(auth,email,password)
 }
 const googleSignIn=(provider)=>{
-
+    setLoading(true);
 return signInWithPopup(auth,provider)
 }
 const logOut=()=>{
@@ -26,7 +26,7 @@ const logOut=()=>{
 useEffect(()=>{
     const unSubscribe=onAuthStateChanged(auth,(currentUser)=>{
         setUser(currentUser);
-        setLoading(false)
+        setLoading(false);
     })
     return ()=>{
 unSubscribe()

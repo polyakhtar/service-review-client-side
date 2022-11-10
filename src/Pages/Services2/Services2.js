@@ -8,9 +8,9 @@ const Services2 = () => {
         fetch('http://localhost:5000/services2')
         .then(res=>res.json())
         .then(data=>{
-            setServices2(data)
+            setServices2(data);
         })
-    },[])
+    },[services2])
     return (
         <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16'>
             {

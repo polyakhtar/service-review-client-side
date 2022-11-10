@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MyreviewsDetail = ({myreview,handleDelete,handleUpdate}) => {
-    const {_id,customer,photoUrl,message,status}=myreview;
+    console.log(myreview)
+    const {_id,customer,photoUrl,message}=myreview;
     return (
         <tr>
         <td>
@@ -18,7 +20,7 @@ const MyreviewsDetail = ({myreview,handleDelete,handleUpdate}) => {
         </td>
         <td className='text-1xl'>{message}</td>
         <td>
-          <button className='btn btn-primary' onClick={()=>handleUpdate(_id)}>{status?status:"Update"}</button>
+          <button className='btn btn-primary'><Link to={`/updatereview/${myreview._id}`}>Update</Link></button>
         </td>
         <td>
           <button className='btn btn-warning' onClick={()=>handleDelete(_id)}>Delete</button>
