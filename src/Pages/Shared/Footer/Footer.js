@@ -6,9 +6,10 @@ const Footer = () => {
         <footer className="footer footer-center p-10 bg-black text-white">
   <div>
    
-    <p className="font-bold">
-     An amazing photographer <br/>Providing reliable service since 2018
-    </p> 
+    <div className="font-bold">
+    <p className='mb-2'> An amazing photographer</p>
+    <p> Providing reliable service since 2018</p>
+    </div> 
     <p>Copyright © 2022 - All right reserved</p>
   </div> 
   <div>

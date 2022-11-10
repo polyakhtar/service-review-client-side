@@ -4,7 +4,7 @@ import img2 from '../../../assets/slider-image/slider-2.jpg';
 import img3 from '../../../assets/slider-image/slider-3.jpg';
 import img4 from '../../../assets/slider-image/slider-4.jpg';
 import img5 from '../../../assets/slider-image/slider-5.jpg';
-import SliderItem from './SliderItem/SliderItem'
+import SliderItem from './SliderItem/SliderItem';
 
 const sliderData=[
     {
