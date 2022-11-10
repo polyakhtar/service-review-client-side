@@ -43,8 +43,6 @@ logOut()
            {menu}
           </ul>
         </div>
-        <div className="navbar-end">
-        </div>
       </div>
     );
 };

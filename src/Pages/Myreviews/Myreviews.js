@@ -35,6 +35,7 @@ const Myreviews = () => {
         })
     }
         }
+        
     return (
         <div className="overflow-x-auto w-full my-8 ">
   <table className="table w-full">
