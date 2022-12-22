@@ -1,6 +1,6 @@
 
 Project Name : WEDDING-PHOTOGRAPHER-ASS
-Live site link : https://wedding-photographer-ass.web.app/services2
+Live site link : https://wedding-photographer-ass.firebaseapp.com/
 
 Project features:
 1.This project includes photography service
