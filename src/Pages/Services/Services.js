@@ -1,16 +1,15 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../ServiceCard/ServiceCard';
 const Services = () => {
-    const [services,setServices]=useState([]);
-    useEffect(()=>{
-        fetch('https://wedding-photographer-assignment-server.vercel.app/services')
-        .then(res=>res.json())
-        .then(data=>{
-            setServices(data)
-        })
-});
+const {data:services=[],isLoading}=useQuery({
+    queryKey:['Services'],
+    queryFn:async()=>{
+      const res=await fetch('https://wedding-photographer-assignment-server.vercel.app/services');
+      const data=await res.json();
+      return data;
+    }
+  })
 
     return (
         <div className="text-center py-10">
@@ -20,6 +19,7 @@ const Services = () => {
      services.map(service=><ServiceCard
      key={service._id}
      service={service}
+     isLoading={isLoading}
      ></ServiceCard>)   
     }
   </div>
