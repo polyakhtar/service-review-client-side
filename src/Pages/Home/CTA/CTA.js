@@ -16,7 +16,7 @@ const CTA = () => {
             For using all services in this field, you can quickly open an account here. We give the best priority to all users of our website.
             </p>
             <div className="inline-flex w-full mt-6 sm:w-auto">
-              <Link href="#" className="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-black duration-300 bg-primary rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+              <Link href="#" className="inline-flex items-center justify-center w-full px-6 py-2 text-sm text-black duration-300 bg-primary rounded-lg focus:ring focus:ring-gray-300 focus:ring-opacity-80">
                 Start Now
               </Link>
             </div>

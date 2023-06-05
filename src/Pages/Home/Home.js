@@ -19,11 +19,11 @@ const Home = () => {
            <Services></Services>
            <Discount></Discount>
            <Photo></Photo>
-           <Contact></Contact>
            <About></About>
            <Review></Review>
            <Features></Features>
            <Team></Team>
+           <Contact></Contact>
            <CTA></CTA>
         </div>
     );
