@@ -2,7 +2,7 @@ import React from 'react';
 
 const Photo = () => {
     return (
-        <div className='text-center my-16'>
+        <div className='text-center my-16 mx-8'>
             <p className='text-3xl font-bold text-orange-600 m-6'>Captured By Me</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             <div><img src="https://images.squarespace-cdn.com/content/v1/5a88fe7418b27d547815aeeb/1639015672426-ACWSFQSQVVPI0O4LPP7E/Coromandel%2BPeal%2BWanaka%2Bwedding%2Belopement%2Bphotographer%2BPanda%2BBay%2BFilms%2BWP-10.jpg?format=750w" alt=""/></div>
